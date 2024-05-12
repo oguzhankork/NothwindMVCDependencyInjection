@@ -1,0 +1,22 @@
+﻿@model List<Supplier>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-hover">
+    <tr>
+        <th>Supplier ID</th>
+        <th>Supplier İsim</th>
+        <th>Supplier Şehri</th>
+    </tr>
+    @foreach (Supplier item in Model)
+    {
+        <tr>
+            <td>@item.SupplierId</td>
+            <td>@item.CompanyName</td>
+            <td>@item.City</td>
+        </tr>
+    }
+</table>
+
